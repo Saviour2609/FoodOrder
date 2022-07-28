@@ -3,11 +3,15 @@ import { View, Text, StyleSheet, Image, Dimensions } from 'react-native';
 
 import * as Location from 'expo-location';
 
+import {connect} from 'react-redux'
+import {onUpdateLocation,UserState,Applicationstate} from '../Redux'
+
 import { useNavigation } from '../Utils';
 
 
 const screenWidth = Dimensions.get('screen').width
-export const LandingScreen = () => {
+
+ const _LandingScreen = () => {
 
     const { navigate } = useNavigation()
 
@@ -113,3 +117,12 @@ const styles = StyleSheet.create({
 
 
 })
+
+
+// const mapToStateProps = (state: Applicationstate) => ({
+//     userReducer: state.useReducer
+// })
+
+// const LandingScrreen = connect(mapToStateProps, { onUpdateLocation })(_LandingScreen)
+
+// export {LandingScrreen}

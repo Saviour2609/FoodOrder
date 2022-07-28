@@ -3,7 +3,7 @@ import {Address} from 'expo-location'
 
 // category
 export interface Category{
-    id: string,
+    // id: string,
     title: String,
     icon: String
 }
@@ -17,8 +17,8 @@ export interface FoodModel{
     category: string;
     price: number;
     readyTime: number;
-    images: [string];
-    unit: number;
+    image: [string];
+    // unit: number;
 }
  
 //Restaurant Model
@@ -45,14 +45,14 @@ export interface UserModel{
     lastName: String;
     contactNumber: String;
     token: string,
-    varified: boolean
+    // varified: boolean
 }
  
 export interface UserState{
     user: UserModel;
     location: Address;
     error: string | undefined;
-    Cart: [FoodModel];
+    // Cart: [FoodModel];
      //orders
 }
 
